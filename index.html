@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Italy travel guide: food, culture and beaches</title>
+<style>
+  :root{
+    --sea:#1b6ca8; --deep:#0d3b5c; --terra:#c8553d; --terra-soft:#e07a5f;
+    --sand:#f4ede4; --cream:#fbf7f1; --olive:#6a7b4f; --ink:#2b2b29; --muted:#6b6b66;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--cream);line-height:1.7;}
+  h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.25;}
+  a{color:var(--sea);}
+  .nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.95);backdrop-filter:blur(6px);
+    border-bottom:1px solid #e7ddcf;display:flex;gap:18px;align-items:center;
+    padding:12px 22px;flex-wrap:wrap;}
+  .nav .brand{font-family:Georgia,serif;font-weight:600;font-size:18px;color:var(--deep);margin-right:auto;}
+  .nav a{text-decoration:none;color:var(--ink);font-size:15px;}
+  .nav a:hover{color:var(--terra);}
+  .hero{background:linear-gradient(135deg,#1b6ca8 0%,#2a9d8f 60%,#6a7b4f 100%);
+    color:#fff;padding:72px 22px 64px;text-align:center;}
+  .hero h1{font-size:44px;margin:0 0 12px;}
+  .hero p{font-size:19px;max-width:620px;margin:0 auto 26px;opacity:.95;}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{background:#fff;color:var(--deep);text-decoration:none;padding:11px 22px;border-radius:30px;
+    font-weight:600;font-size:15px;}
+  .btn.alt{background:var(--terra);color:#fff;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  .intro{font-size:18px;color:var(--muted);max-width:760px;margin:42px auto 8px;text-align:center;}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin:54px 0 8px;flex-wrap:wrap;}
+  .section-head h2{font-size:30px;margin:0;color:var(--deep);}
+  .section-head .tag{font-size:14px;color:#fff;background:var(--olive);padding:4px 12px;border-radius:20px;}
+  .section-note{color:var(--muted);margin:0 0 22px;max-width:760px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-bottom:18px;}
+  .card{background:#fff;border:1px solid #ece3d6;border-radius:16px;overflow:hidden;
+    box-shadow:0 2px 14px rgba(13,59,92,.06);display:flex;flex-direction:column;}
+  .card-top{padding:20px 22px;color:#fff;}
+  .card-top.mainland{background:linear-gradient(120deg,var(--sea),var(--deep));}
+  .card-top.sicily{background:linear-gradient(120deg,var(--terra-soft),var(--terra));}
+  .card-top h3{margin:0 0 10px;font-size:24px;}
+  .pill{display:inline-block;background:rgba(255,255,255,.22);padding:5px 12px;border-radius:20px;
+    font-size:13px;font-weight:600;}
+  .card-body{padding:18px 22px 22px;}
+  .block{padding:12px 0;border-top:1px solid #f0e8db;}
+  .block:first-child{border-top:none;padding-top:4px;}
+  .block h4{margin:0 0 4px;font-size:16px;color:var(--terra);}
+  .card-top.mainland ~ .card-body .block h4{color:var(--sea);}
+  .block p{margin:0;font-size:15px;color:#37372f;}
+  footer{background:var(--deep);color:#dfe9f1;text-align:center;padding:36px 22px;margin-top:60px;font-size:14px;}
+  footer a{color:#bfe0ff;}
+  @media(max-width:560px){.hero h1{font-size:34px;}.hero{padding:54px 18px 48px;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand">Italy travel guide</span>
+  <a href="#mainland">Mainland</a>
+  <a href="#sicily">Sicily</a>
+  <a href="#rome">Rome</a>
+  <a href="#florence">Florence</a>
+  <a href="#venice">Venice</a>
+  <a href="#ortigia">Ortigia</a>
+  <a href="#taormina">Taormina</a>
+  <a href="#lipari">Lipari</a>
+</nav>
+
+<header class="hero">
+  <h1>Italy travel guide</h1>
+  <p>Six places worth the trip, each with what to eat, what to see, and where to swim. From the classic cities of the mainland to the sea and food of Sicily.</p>
+  <div class="btns">
+    <a class="btn" href="#mainland">Mainland</a>
+    <a class="btn alt" href="#sicily">Sicily</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro">For every place you will find three things: a <strong>food recommendation</strong>, the <strong>culture</strong> not to miss, and the <strong>beaches (spiagge)</strong> nearby. Each area is also tagged with its signature food.</p>
+
+  <section id="mainland">
+    <div class="section-head">
+      <h2>Mainland</h2>
+      <span class="tag">Rome &middot; Florence &middot; Venice</span>
+    </div>
+    <p class="section-note">The classic Italian triangle: history, art, and food, with the coast never too far away.</p>
+    <div class="grid">
+
+      <article class="card" id="rome">
+        <div class="card-top mainland">
+          <h3>Rome</h3>
+          <span class="pill">Signature food: carbonara</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>Roman pasta classics: carbonara, cacio e pepe, and amatriciana. Try suppli (fried rice balls) and pizza al taglio. The Testaccio and Trastevere areas are full of good trattorias.</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>The Colosseum, the Roman Forum, and the Pantheon, plus the Vatican Museums and St. Peter's Basilica. Toss a coin in the Trevi Fountain.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Rome is inland but the sea is close. Ostia is about 30 minutes by train; Fregene and the white sand of Sabaudia (about 1 hour) are popular day trips.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="florence">
+        <div class="card-top mainland">
+          <h3>Florence</h3>
+          <span class="pill">Signature food: bistecca alla fiorentina</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>The bistecca alla fiorentina is a thick T-bone steak cooked rare. Also try ribollita (bread and vegetable soup), a lampredotto sandwich, and Chianti wine from the Tuscan hills.</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>The home of the Renaissance: the Duomo with Brunelleschi's dome, the Uffizi Gallery, Michelangelo's David at the Accademia, and the Ponte Vecchio.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Florence is inland with no beach of its own. The nearest coast is Versilia (Viareggio and Forte dei Marmi), about 1.5 hours by car or train.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="venice">
+        <div class="card-top mainland">
+          <h3>Venice</h3>
+          <span class="pill">Signature food: cicchetti</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>Cicchetti are small Venetian bar snacks, great with a glass of wine or a spritz. Try sarde in saor (sweet and sour sardines) and risotto al nero di seppia (cuttlefish ink).</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>St. Mark's Basilica and Square, the Doge's Palace, the Grand Canal, and the Rialto Bridge. Take a vaporetto to the islands of Murano and Burano.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>The Lido di Venezia is the city's own beach island, a short boat ride away. Jesolo and Cavallino-Treporti nearby have long sandy beaches.</p></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="sicily">
+    <div class="section-head">
+      <h2>Sicily</h2>
+      <span class="tag">Ortigia &middot; Taormina &middot; Lipari</span>
+    </div>
+    <p class="section-note">The signature food of Sicily is <strong>ricotta</strong>: it fills cannoli and cassata and shows up in pastries across the island. Pair it with a granita and a brioche for breakfast.</p>
+    <div class="grid">
+
+      <article class="card" id="ortigia">
+        <div class="card-top sicily">
+          <h3>Ortigia</h3>
+          <span class="pill">Signature food: ricotta</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>Sicilian sweets built on ricotta (cannoli and cassata), plus fresh seafood, arancini, and granita with brioche. The Ortigia street market is a highlight.</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>The old-town island of Siracusa: a Duomo built inside an ancient Greek temple, the Fountain of Arethusa, and Baroque streets. Nearby is the Neapolis park with its Greek theatre.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Small swimming spots like Cala Rossa on Ortigia itself, then Fontane Bianche and Arenella a short drive south, and the Vendicari reserve (Calamosche) further on.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="taormina">
+        <div class="card-top sicily">
+          <h3>Taormina</h3>
+          <span class="pill">Signature food: ricotta</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>Ricotta sweets and almond treats, granita, and pasta alla Norma (with fried aubergine and salted ricotta). Many terraces look out over Mount Etna.</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>The ancient Greek-Roman Theatre, framed by Etna and the sea, is the star. Stroll Corso Umberto and the Villa Comunale gardens in the medieval old town.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Isola Bella is a tiny island and nature reserve below the town; Mazzaro is reachable by cable car. Giardini Naxos and Letojanni have wider beaches.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="lipari">
+        <div class="card-top sicily">
+          <h3>Lipari</h3>
+          <span class="pill">Signature food: ricotta</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; Food</h4><p>Aeolian seafood, capers, and Sicilian ricotta sweets and granita. Try the sweet Malvasia wine made on the islands.</p></div>
+          <div class="block"><h4>&#127963; Culture</h4><p>The largest of the Aeolian Islands, a UNESCO-listed volcanic group. Visit the Lipari castle and its archaeological museum, then take a boat to Vulcano and Stromboli.</p></div>
+          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Canneto, the white pumice of Spiaggia Bianca, Valle Muria, and Acquacalda. The water is clear and the scenery is volcanic.</p></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>Italy travel guide &middot; food, culture and beaches &middot; Rome, Florence, Venice and Sicily.</p>
+  <p>A personal travel guide. Always check current opening times and transport before you go.</p>
+</footer>
+
+</body>
+</html>
