@@ -39,6 +39,7 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-bottom:18px;}
   .card{background:#fff;border:1px solid #ece3d6;border-radius:16px;overflow:hidden;
     box-shadow:0 2px 14px rgba(13,59,92,.06);display:flex;flex-direction:column;}
+  .card-img{width:100%;height:185px;object-fit:cover;display:block;background:#dfe7ef;}
   .card-top{padding:20px 22px;color:#fff;}
   .card-top.mainland{background:linear-gradient(120deg,var(--sea),var(--deep));}
   .card-top.sicily{background:linear-gradient(120deg,var(--terra-soft),var(--terra));}
@@ -91,6 +92,7 @@
     <div class="grid">
 
       <article class="card" id="rome">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/960px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg" alt="The Trevi Fountain in Rome" loading="lazy">
         <div class="card-top mainland">
           <h3>Rome</h3>
           <span class="pill">Signature food: carbonara</span>
@@ -103,6 +105,7 @@
       </article>
 
       <article class="card" id="florence">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/FirenzeDec092023_01.jpg/960px-FirenzeDec092023_01.jpg" alt="The skyline of Florence" loading="lazy">
         <div class="card-top mainland">
           <h3>Florence</h3>
           <span class="pill">Signature food: bistecca alla fiorentina</span>
@@ -115,6 +118,7 @@
       </article>
 
       <article class="card" id="venice">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Venezia_aerial_view.jpg/960px-Venezia_aerial_view.jpg" alt="Aerial view of Venice" loading="lazy">
         <div class="card-top mainland">
           <h3>Venice</h3>
           <span class="pill">Signature food: cicchetti</span>
@@ -138,6 +142,7 @@
     <div class="grid">
 
       <article class="card" id="ortigia">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ortigia_dall%27alto.jpg/960px-Ortigia_dall%27alto.jpg" alt="Aerial view of Ortigia, Siracusa" loading="lazy">
         <div class="card-top sicily">
           <h3>Ortigia</h3>
           <span class="pill">Signature food: ricotta</span>
@@ -150,6 +155,7 @@
       </article>
 
       <article class="card" id="taormina">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg/960px-Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg" alt="The coast of Taormina" loading="lazy">
         <div class="card-top sicily">
           <h3>Taormina</h3>
           <span class="pill">Signature food: ricotta</span>
@@ -162,6 +168,7 @@
       </article>
 
       <article class="card" id="lipari">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg/960px-Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg" alt="Aerial view of Lipari in the Aeolian Islands" loading="lazy">
         <div class="card-top sicily">
           <h3>Lipari</h3>
           <span class="pill">Signature food: ricotta</span>
@@ -180,6 +187,7 @@
 <footer>
   <p>Italy travel guide &middot; food, culture and beaches &middot; Rome, Florence, Venice and Sicily.</p>
   <p>A personal travel guide. Always check current opening times and transport before you go.</p>
+  <p style="margin-top:8px;font-size:13px;opacity:.8;">Photos from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</p>
 </footer>
 
 </body>
