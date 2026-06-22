@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>Italy travel guide: food, culture and beaches</title>
+<title>Italy through the eyes of a local</title>
 <style>
   :root{
     --sea:#1b6ca8; --deep:#0d3b5c; --terra:#c8553d; --terra-soft:#e07a5f;
-    --sand:#f4ede4; --cream:#fbf7f1; --olive:#6a7b4f; --ink:#2b2b29; --muted:#6b6b66;
+    --teal:#2a9d8f; --teal-deep:#1f7a6f; --sand:#f4ede4; --cream:#fbf7f1;
+    --olive:#6a7b4f; --ink:#2b2b29; --muted:#6b6b66;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -17,42 +18,45 @@
   h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.25;}
   a{color:var(--sea);}
   .nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.95);backdrop-filter:blur(6px);
-    border-bottom:1px solid #e7ddcf;display:flex;gap:18px;align-items:center;
+    border-bottom:1px solid #e7ddcf;display:flex;gap:16px;align-items:center;
     padding:12px 22px;flex-wrap:wrap;}
   .nav .brand{font-family:Georgia,serif;font-weight:600;font-size:18px;color:var(--deep);margin-right:auto;}
   .nav a{text-decoration:none;color:var(--ink);font-size:15px;}
   .nav a:hover{color:var(--terra);}
-  .hero{background:linear-gradient(135deg,#1b6ca8 0%,#2a9d8f 60%,#6a7b4f 100%);
-    color:#fff;padding:72px 22px 64px;text-align:center;}
-  .hero h1{font-size:44px;margin:0 0 12px;}
-  .hero p{font-size:19px;max-width:620px;margin:0 auto 26px;opacity:.95;}
+  .hero{background:linear-gradient(135deg,#1b6ca8 0%,#2a9d8f 55%,#6a7b4f 100%);
+    color:#fff;padding:76px 22px 66px;text-align:center;}
+  .hero h1{font-size:46px;margin:0 0 14px;}
+  .hero p{font-size:19px;max-width:660px;margin:0 auto 26px;opacity:.96;}
+  .hero .sign{font-style:italic;opacity:.9;font-size:16px;margin-top:18px;}
   .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .btn{background:#fff;color:var(--deep);text-decoration:none;padding:11px 22px;border-radius:30px;
-    font-weight:600;font-size:15px;}
+  .btn{background:#fff;color:var(--deep);text-decoration:none;padding:11px 22px;border-radius:30px;font-weight:600;font-size:15px;}
   .btn.alt{background:var(--terra);color:#fff;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
-  .intro{font-size:18px;color:var(--muted);max-width:760px;margin:42px auto 8px;text-align:center;}
-  .section-head{display:flex;align-items:baseline;gap:14px;margin:54px 0 8px;flex-wrap:wrap;}
-  .section-head h2{font-size:30px;margin:0;color:var(--deep);}
+  .intro{font-size:18px;color:var(--muted);max-width:780px;margin:42px auto 8px;text-align:center;}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin:56px 0 8px;flex-wrap:wrap;}
+  .section-head h2{font-size:31px;margin:0;color:var(--deep);}
   .section-head .tag{font-size:14px;color:#fff;background:var(--olive);padding:4px 12px;border-radius:20px;}
-  .section-note{color:var(--muted);margin:0 0 22px;max-width:760px;}
+  .section-note{color:var(--muted);margin:0 0 22px;max-width:780px;}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-bottom:18px;}
   .card{background:#fff;border:1px solid #ece3d6;border-radius:16px;overflow:hidden;
     box-shadow:0 2px 14px rgba(13,59,92,.06);display:flex;flex-direction:column;}
   .card-img{width:100%;height:185px;object-fit:cover;display:block;background:#dfe7ef;}
   .card-top{padding:20px 22px;color:#fff;}
   .card-top.mainland{background:linear-gradient(120deg,var(--sea),var(--deep));}
+  .card-top.north{background:linear-gradient(120deg,var(--teal),var(--teal-deep));}
   .card-top.sicily{background:linear-gradient(120deg,var(--terra-soft),var(--terra));}
   .card-top h3{margin:0 0 10px;font-size:24px;}
-  .pill{display:inline-block;background:rgba(255,255,255,.22);padding:5px 12px;border-radius:20px;
-    font-size:13px;font-weight:600;}
+  .pill{display:inline-block;background:rgba(255,255,255,.22);padding:5px 12px;border-radius:20px;font-size:13px;font-weight:600;}
   .card-body{padding:18px 22px 22px;}
   .block{padding:12px 0;border-top:1px solid #f0e8db;}
   .block:first-child{border-top:none;padding-top:4px;}
   .block h4{margin:0 0 4px;font-size:16px;color:var(--terra);}
   .card-top.mainland ~ .card-body .block h4{color:var(--sea);}
+  .card-top.north ~ .card-body .block h4{color:var(--teal-deep);}
   .block p{margin:0;font-size:15px;color:#37372f;}
-  footer{background:var(--deep);color:#dfe9f1;text-align:center;padding:36px 22px;margin-top:60px;font-size:14px;}
+  .block.tip{background:#fbf3ec;margin:10px -22px -4px;padding:12px 22px;border-top:1px solid #f0e1d2;}
+  .block.tip h4{color:var(--terra)!important;}
+  footer{background:var(--deep);color:#dfe9f1;text-align:center;padding:38px 22px;margin-top:64px;font-size:14px;}
   footer a{color:#bfe0ff;}
   @media(max-width:560px){.hero h1{font-size:34px;}.hero{padding:54px 18px 48px;}}
 </style>
@@ -60,47 +64,43 @@
 <body>
 
 <nav class="nav">
-  <span class="brand">Italy travel guide</span>
-  <a href="#mainland">Mainland</a>
-  <a href="#sicily">Sicily</a>
-  <a href="#rome">Rome</a>
-  <a href="#florence">Florence</a>
-  <a href="#venice">Venice</a>
-  <a href="#ortigia">Ortigia</a>
-  <a href="#taormina">Taormina</a>
-  <a href="#lipari">Lipari</a>
+  <span class="brand">Italy, like a local</span>
+  <a href="#rome">Rome</a> <a href="#florence">Florence</a> <a href="#venice">Venice</a> <a href="#cinqueterre">Cinque Terre</a> <a href="#lakegarda">Lake Garda</a> <a href="#ortigia">Ortigia</a> <a href="#taormina">Taormina</a> <a href="#lipari">Lipari</a>
 </nav>
 
 <header class="hero">
-  <h1>Italy travel guide</h1>
-  <p>Six places worth the trip, each with what to eat, what to see, and where to swim. From the classic cities of the mainland to the sea and food of Sicily.</p>
+  <h1>Italy, through the eyes of a local</h1>
+  <p>No tourist traps, no menu photos, no cappuccino after lunch. Just the plates, the corners and the swims I'd send a friend to &mdash; eight places, the way we actually live them.</p>
   <div class="btns">
-    <a class="btn" href="#mainland">Mainland</a>
-    <a class="btn alt" href="#sicily">Sicily</a>
+    <a class="btn" href="#mainland">The classics</a>
+    <a class="btn alt" href="#north">North</a>
+    <a class="btn" href="#sicily">Sicily</a>
   </div>
+  <p class="sign">&mdash; from an Italian, to you</p>
 </header>
 
 <div class="wrap">
-  <p class="intro">For every place you will find three things: a <strong>food recommendation</strong>, the <strong>culture</strong> not to miss, and the <strong>beaches (spiagge)</strong> nearby. Each area is also tagged with its signature food.</p>
+  <p class="intro">For every place, four things the way a local sees them: <strong>what to eat</strong> (and where <em>not</em> to), <strong>what to see</strong>, <strong>where to swim</strong>, and a <strong>&#129308; local tip</strong> &mdash; the little move we keep for ourselves.</p>
 
   <section id="mainland">
     <div class="section-head">
-      <h2>Mainland</h2>
-      <span class="tag">Rome &middot; Florence &middot; Venice</span>
+      <h2>The classic triangle</h2>
+      <span class="tag">Rome · Florence · Venice</span>
     </div>
-    <p class="section-note">The classic Italian triangle: history, art, and food, with the coast never too far away.</p>
+    <p class="section-note">History, art and the four-pasta dinner — but eaten where the streets get narrow, not on the piazza with the guy waving a menu.</p>
     <div class="grid">
 
       <article class="card" id="rome">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/960px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg" alt="The Trevi Fountain in Rome" loading="lazy">
         <div class="card-top mainland">
           <h3>Rome</h3>
-          <span class="pill">Signature food: carbonara</span>
+          <span class="pill">&#128075; Eat: Cacio e pepe</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>Roman pasta classics: carbonara, cacio e pepe, and amatriciana. Try suppli (fried rice balls) and pizza al taglio. The Testaccio and Trastevere areas are full of good trattorias.</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>The Colosseum, the Roman Forum, and the Pantheon, plus the Vatican Museums and St. Peter's Basilica. Toss a coin in the Trevi Fountain.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Rome is inland but the sea is close. Ostia is about 30 minutes by train; Fregene and the white sand of Sabaudia (about 1 hour) are popular day trips.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>Stick to the four Roman pastas and you can&#x27;t go wrong: cacio e pepe, gricia, amatriciana, carbonara (no cream, ever, it&#x27;s just egg, guanciale and pecorino). For dinner we eat where the streets get narrow in Testaccio or further out in the Quadraro, never on a piazza with a guy waving a menu at you. Order a supplì while you wait and finish with carciofo alla romana when the artichokes are in season, late winter into spring.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Rome runs on rhythm: long lunch, the city goes quiet in the early afternoon, then everything wakes up for the passeggiata and an aperitivo around seven. We don&#x27;t rush coffee, we drink it standing at the bar (you pay less) and never order a cappuccino after a meal, that&#x27;s a dead giveaway. Go to the big sights at opening or at golden hour and spend the heat of the day where the locals are, in the alleys of Trastevere or Monti.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>Rome isn&#x27;t a beach city, but in summer we escape to the sea at Sperlonga or the cleaner stretches south, and Romans pile onto the trains to Anzio and Santa Marinella. For a proper swim skip Ostia&#x27;s crowded free beach and go a bit further down the coast where the water&#x27;s clearer; bring cash for a sunbed at a stabilimento.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Every old fountain with a little spout, the nasoni, runs free cold drinking water; cap the bottom hole with your thumb and it arcs up like a fountain to drink, so you never pay for water in summer. And go to the Trevi or the Pantheon at 7am, you&#x27;ll have them nearly to yourself before the tour buses land.</p></div>
         </div>
       </article>
 
@@ -108,12 +108,13 @@
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/FirenzeDec092023_01.jpg/960px-FirenzeDec092023_01.jpg" alt="The skyline of Florence" loading="lazy">
         <div class="card-top mainland">
           <h3>Florence</h3>
-          <span class="pill">Signature food: bistecca alla fiorentina</span>
+          <span class="pill">&#128075; Eat: Bistecca alla fiorentina</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>The bistecca alla fiorentina is a thick T-bone steak cooked rare. Also try ribollita (bread and vegetable soup), a lampredotto sandwich, and Chianti wine from the Tuscan hills.</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>The home of the Renaissance: the Duomo with Brunelleschi's dome, the Uffizi Gallery, Michelangelo's David at the Accademia, and the Ponte Vecchio.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Florence is inland with no beach of its own. The nearest coast is Versilia (Viareggio and Forte dei Marmi), about 1.5 hours by car or train.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>We eat the bistecca rare and thick, never well-done, and never on the tourist piazze where they charge you for the view. Come to my side of the river, the Oltrarno around Santo Spirito, where the streets get narrow and the trattorie still write the menu by hand: trippa or lampredotto from a street cart for lunch, peposo or ribollita when it gets cold. Order the house Chianti in the carafe, sfuso, and you&#x27;ll thank me.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Florence is small, so we walk it on foot and we go early, before the cruise crowds choke the Ponte Vecchio. Skip the two-hour Uffizi line in August and book a slot, then come hang in Santo Spirito at aperitivo when the whole quartiere spills onto the steps of the church. The real city is the artisan botteghe in the Oltrarno, the gilders and leather guys still working like it&#x27;s 1500.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>Florence has no sea, so on a hot day we drive an hour into the Mugello or the Casentino to swim in the river pools, cold and clean under the trees. If you want the proper Tuscan coast, the Maremma south of Grosseto is where we go, wild beaches and pine forest, not the umbrella-row resorts.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Go up to Piazzale Michelangelo for the view like everyone says, but then keep climbing five more minutes to San Miniato al Monte, where the monks sing Gregorian chant at vespers around sunset and almost no tourist makes it that far. That&#x27;s the Florence we keep for ourselves.</p></div>
         </div>
       </article>
 
@@ -121,12 +122,52 @@
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Venezia_aerial_view.jpg/960px-Venezia_aerial_view.jpg" alt="Aerial view of Venice" loading="lazy">
         <div class="card-top mainland">
           <h3>Venice</h3>
-          <span class="pill">Signature food: cicchetti</span>
+          <span class="pill">&#128075; Eat: Cicchetti and a spritz</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>Cicchetti are small Venetian bar snacks, great with a glass of wine or a spritz. Try sarde in saor (sweet and sour sardines) and risotto al nero di seppia (cuttlefish ink).</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>St. Mark's Basilica and Square, the Doge's Palace, the Grand Canal, and the Rialto Bridge. Take a vaporetto to the islands of Murano and Burano.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>The Lido di Venezia is the city's own beach island, a short boat ride away. Jesolo and Cavallino-Treporti nearby have long sandy beaches.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>Forget the sit-down menus near San Marco with the photos outside, that is for the tour buses. We eat cicchetti standing at a bacaro: little bread with baccalà mantecato (whipped salt cod), sarde in saor (sweet-sour sardines with onions), a fried meatball, washed down with an ombra of wine. Do it the proper way, hop two or three bacari in a row before dinner, around 6pm, that is our aperitivo.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Venice is not a museum, real people still live here, so we walk fast, keep right, and never stop on a bridge to take a photo. Go early, the city before 9am is ours again, the light on the canals is unreal and you hear footsteps instead of suitcases. Skip the gondola circus at the main stops; if you want the water, take the traghetto, the standing gondola that ferries locals across the Grand Canal for a couple of euros.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>The proper swim is the Lido, our long sandy beach island, a short vaporetto ride away, best in late spring or September when the crowds thin out. For something wilder we go further to the lagoon islands or the beaches toward Cavallino; clean Adriatic water, real sand, no postcard hustle.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Buy your fish and produce at the Rialto market in the morning, around 8 to 9, then disappear into Cannaregio or Castello for lunch, where the alleys get narrow and the prices get honest. The rule: the closer to Piazza San Marco, the worse and pricier the food, so always walk away from the crowd, not toward it.</p></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="north">
+    <div class="section-head">
+      <h2>The North — coast &amp; lakes</h2>
+      <span class="tag">Cinque Terre · Lake Garda</span>
+    </div>
+    <p class="section-note">Liguria's vertical villages and the alpine-clear lakes. Pesto pounded in a mortar, lake fish, and a swim off the rocks.</p>
+    <div class="grid">
+
+      <article class="card" id="cinqueterre">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg/960px-Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg" alt="Manarola in the Cinque Terre" loading="lazy">
+        <div class="card-top north">
+          <h3>Cinque Terre</h3>
+          <span class="pill">&#128075; Eat: Trofie al pesto</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; What to eat</h4><p>Pesto is ours, so eat it where they still pound it in a marble mortar: trofie or trenette al pesto, with a green bean and a slice of potato thrown in the pot, that&#x27;s how nonna does it. Get a cono of fried anchovies and calamari from a friggitoria and walk with it, skip the sit-down &quot;seafood platters&quot; near the station. And the focaccia, plain or with onion in the morning, dipped in your cappuccino like we do, nobody&#x27;s judging.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>We live vertically here, on terraces our grandfathers cut into the cliff and held up with dry-stone walls, the muretti a secco, so respect that this is a working village, not a postcard. Mornings are slow and the riposo in the afternoon is real, shutters down, so plan around it. Take the sentiero, the old footpaths between villages, instead of only the train, and you&#x27;ll see the vineyards and the capers growing wild on the walls.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>The swimming is rock and pebble, not sand, so bring water shoes, scogli are slippery. Monterosso has the only real beach with loungers, but locals slip down to the little coves, like the cala past the Vernazza harbour, and jump straight off the rocks into deep clear water.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Come in early June or September and start your day at 7am: the trains and trails are empty, the light on the water is best, and you&#x27;ll have the villages to yourself before the day-trippers arrive around 10. Buy the Cinque Terre Card only if you&#x27;re hiking the paid trails, otherwise just get point-to-point train tickets, it&#x27;s cheaper. And buy a bottle of Sciacchetrà, our sweet passito wine, straight from a small grower, not the souvenir shops.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="lakegarda">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Italy_-_Sirmione.jpg/960px-Italy_-_Sirmione.jpg" alt="Sirmione on Lake Garda" loading="lazy">
+        <div class="card-top north">
+          <h3>Lake Garda</h3>
+          <span class="pill">&#128075; Eat: Lavarello al lago</span>
+        </div>
+        <div class="card-body">
+          <div class="block"><h4>&#127837; What to eat</h4><p>We eat the lake: lavarello (whitefish) grilled or breaded, sardine essiccate (sun-dried, marinated lake sardines) the old ladies still make, and a plate of bigoli pasta. With it, always our own oil, the Garda DOP that&#x27;s lighter and more delicate than the southern stuff, and a glass of Bardolino or a Lugana white from the south shore.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Garda is three regions in one lake, so a Veronese on the east shore and a Brescian on the west bicker over everything but agree on the spritz at 6. We do the passeggiata along the lungolago at dusk, then sit. Skip the loud lakefront terraces packed with tour groups; walk two streets back into the centro storico where the alleys narrow and the prices halve.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>The lake is clean and swimmable, coldest and clearest up north toward Riva and Torbole where the water turns alpine and the windsurfers live. For lazy swimming we go to the pebbly coves around the Sirmione peninsula or the Baia delle Sirene near Garda town, early morning before the day-trippers claim the rocks.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Take the slow battello (the public ferry, not a tour boat) across the lake instead of driving the clogged shore road, get off at a small port like Punta San Vigilio at golden hour, and you&#x27;ll have one of the prettiest corners of Garda almost to yourself. Come May or September, never August.</p></div>
         </div>
       </article>
 
@@ -136,21 +177,22 @@
   <section id="sicily">
     <div class="section-head">
       <h2>Sicily</h2>
-      <span class="tag">Ortigia &middot; Taormina &middot; Lipari</span>
+      <span class="tag">Ortigia · Taormina · Lipari</span>
     </div>
-    <p class="section-note">The signature food of Sicily is <strong>ricotta</strong>: it fills cannoli and cassata and shows up in pastries across the island. Pair it with a granita and a brioche for breakfast.</p>
+    <p class="section-note">Greek temples, volcanic water and ricotta in everything sweet. Start the day with a granita and a brioche.</p>
     <div class="grid">
 
       <article class="card" id="ortigia">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ortigia_dall%27alto.jpg/960px-Ortigia_dall%27alto.jpg" alt="Aerial view of Ortigia, Siracusa" loading="lazy">
         <div class="card-top sicily">
           <h3>Ortigia</h3>
-          <span class="pill">Signature food: ricotta</span>
+          <span class="pill">&#128075; Eat: Pasta con le sarde</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>Sicilian sweets built on ricotta (cannoli and cassata), plus fresh seafood, arancini, and granita with brioche. The Ortigia street market is a highlight.</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>The old-town island of Siracusa: a Duomo built inside an ancient Greek temple, the Fountain of Arethusa, and Baroque streets. Nearby is the Neapolis park with its Greek theatre.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Small swimming spots like Cala Rossa on Ortigia itself, then Fontane Bianche and Arenella a short drive south, and the Vendicari reserve (Calamosche) further on.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>Pasta con le sarde is the one, sardines, wild fennel, pine nuts, that sweet-savoury thing we do here, and a plate of polpo (octopus) bought fresh and dressed simply. For street food we grab a cartoccio of fried fish or, in the morning, a focaccia stuffed with stuff from the bakery. Skip the trattorie ringed around Piazza Duomo with the photo menus and the guy waving you in; walk two minutes until the vicoli (little lanes) get narrow and you&#x27;ll find where we actually eat.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Ortigia is the old island, the heart of Siracusa, layered Greek-on-Norman-on-Baroque, and the Duomo is literally a Greek temple with a church grown around it, you can still see the ancient columns in the walls. We live by the passeggiata: late afternoon into evening everyone strolls, you sit for an aperitivo, you greet half the street. Go slow and look up, the best things are the stone, the light at golden hour, and the sea at the end of every alley.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>We swim right off the rocks, the spots along the Lungomare and around the Forte Vigliena where locals lay their towels on the stone and dive into clear, deep water, no sand needed. Cala Rossa and the little ladders into the sea are ours; if you want a proper beach you go out to Fontane Bianche or Arenella, but for a quick dip the island itself is perfect, June to September the water is warm and blue.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Go to the Mercato di Ortigia early, before 1pm, that&#x27;s when it&#x27;s alive, fishmongers shouting, tomatoes, capers, ricotta, and the famous panino spot where they slice you mortadella, cheese and sun-dried tomatoes to order, then eat it standing on the steps by the sea. Don&#x27;t bother after lunch, the market closes and the magic is gone; mornings are the secret, and skip the overpriced gelato on the square, the good one is tucked back in the lanes.</p></div>
         </div>
       </article>
 
@@ -158,35 +200,38 @@
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg/960px-Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg" alt="The coast of Taormina" loading="lazy">
         <div class="card-top sicily">
           <h3>Taormina</h3>
-          <span class="pill">Signature food: ricotta</span>
+          <span class="pill">&#128075; Eat: Granita con brioche</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>Ricotta sweets and almond treats, granita, and pasta alla Norma (with fried aubergine and salted ricotta). Many terraces look out over Mount Etna.</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>The ancient Greek-Roman Theatre, framed by Etna and the sea, is the star. Stroll Corso Umberto and the Villa Comunale gardens in the medieval old town.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Isola Bella is a tiny island and nature reserve below the town; Mazzaro is reachable by cable car. Giardini Naxos and Letojanni have wider beaches.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>Breakfast is granita di mandorla (almond) or gelsi (mulberry) with a brioche col tuppo to dunk, the way we actually start a summer morning. For real food skip the menus with photos on Corso Umberto and the square; walk until the streets get narrow and steep, where the little places do pasta alla Norma, fresh sarde, and arancini that aren&#x27;t reheated. Save room for a cannolo filled to order, never the ones sitting pre-filled in a tray.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Do Corso Umberto early or at passeggiata hour around 7pm when the light goes gold and the day-trippers have left for their cruise ships. The Greek Theatre is worth it with Etna smoking behind the stage, but go right at opening or for a summer concert, not midday in the crush. We treat the evening as the main event, not the noon heat.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>Taormina town sits on a cliff, so the swimming is down at Isola Bella and Mazzarò, reached by the funivia (cable car) rather than the brutal walk back up. Isola Bella is a pebble cove, stunning but packed by 11am, so go early or take a boat around to the little grottos and swim off the back of Capo Sant&#x27;Andrea where it&#x27;s quieter and clear.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Don&#x27;t sleep in Taormina if you want the real side: base in Castelmola just above (10 minutes up) for a wine-almond at the old bar and a view over the whole coast, or come down to Catania&#x27;s fish market, A Piscaria, on a weekday morning, then drive up Etna in the afternoon to eat at a cantina among the lava vineyards. That loop, sea in the morning, volcano by dusk, is what we&#x27;d actually do with a friend.</p></div>
         </div>
       </article>
 
       <article class="card" id="lipari">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg/960px-Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg" alt="Aerial view of Lipari in the Aeolian Islands" loading="lazy">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg/960px-Aerial_image_of_Lipari_%28view_from_the_southwest%29.jpg" alt="Aerial view of Lipari, Aeolian Islands" loading="lazy">
         <div class="card-top sicily">
           <h3>Lipari</h3>
-          <span class="pill">Signature food: ricotta</span>
+          <span class="pill">&#128075; Eat: Pane cunzato</span>
         </div>
         <div class="card-body">
-          <div class="block"><h4>&#127837; Food</h4><p>Aeolian seafood, capers, and Sicilian ricotta sweets and granita. Try the sweet Malvasia wine made on the islands.</p></div>
-          <div class="block"><h4>&#127963; Culture</h4><p>The largest of the Aeolian Islands, a UNESCO-listed volcanic group. Visit the Lipari castle and its archaeological museum, then take a boat to Vulcano and Stromboli.</p></div>
-          <div class="block"><h4>&#127958; Beaches (spiagge)</h4><p>Canneto, the white pumice of Spiaggia Bianca, Valle Muria, and Acquacalda. The water is clear and the scenery is volcanic.</p></div>
+          <div class="block"><h4>&#127837; What to eat</h4><p>We don&#x27;t sit down for a heavy lunch in summer; we eat pane cunzato, a fat slab of bread dressed with our tomatoes, capers, oregano, anchovy and a flood of olive oil, standing up between swims. For dinner go where the streets get narrow behind the corso, not the places with photo menus on Marina Corta, and order whatever pasta they push that day with capers and swordfish. Finish with a glass of cold Malvasia, our sweet wine, and granita di gelsi if the mulberries are in.</p></div>
+          <div class="block"><h4>&#127963; What to see</h4><p>Lipari runs on the passeggiata: at golden hour everyone walks the corso up to the castello, the old fortress on the rock where the cathedral and the small archaeological museum sit. The island empties of day-trippers around 5pm when the hydrofoils leave, and that&#x27;s when it becomes ours again, so plan your evening for after that. We talk loud, we&#x27;re not rushing, and August is the festa di San Bartolomeo, our patron, with fireworks over the harbor.</p></div>
+          <div class="block"><h4>&#127958; Where to swim</h4><p>Skip pebbly Canneto&#x27;s main strip and walk north to Spiaggia Bianca, the old pumice beach where the water glows turquoise from the white seabed. For the cleanest swim take a boat to the Cave di Pomice or around to the faraglioni rocks; the water there is deep and impossibly blue, best from morning to early afternoon before the wind picks up.</p></div>
+          <div class="block tip"><h4>&#129308; Local tip</h4><p>Rent a little gozzo (wooden boat) for half a day from a fisherman at Marina Corta rather than booking a packaged tour, and go early to swim under the cliffs before the tour groups arrive. And don&#x27;t burn your whole trip on Lipari town, hop the 10-minute ferry to Vulcano for the sulphur and the black sand, or to tiny Salina for the best granita and the real Malvasia.</p></div>
         </div>
       </article>
 
     </div>
   </section>
+
 </div>
 
 <footer>
-  <p>Italy travel guide &middot; food, culture and beaches &middot; Rome, Florence, Venice and Sicily.</p>
-  <p>A personal travel guide. Always check current opening times and transport before you go.</p>
+  <p>Italy, through the eyes of a local &middot; eight places, written like I'd tell a friend.</p>
+  <p>Opening times, trains and ferries change &mdash; always check before you go. Go early, eat where the streets get narrow.</p>
   <p style="margin-top:8px;font-size:13px;opacity:.8;">Photos from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</p>
 </footer>
 
